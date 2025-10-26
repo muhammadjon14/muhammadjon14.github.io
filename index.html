@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iskandar • Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0f14;
+      --text: #e6eef8;
+      --muted: #9fb0c5;
+      --brand: #66e3ff;
+      --brand-2: #a78bfa;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: Inter, sans-serif;
+      background: linear-gradient(135deg, rgba(102,227,255,0.15), rgba(167,139,250,0.15)),
+                  url('https://www.transparenttextures.com/patterns/stardust.png');
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 24px;
+    }
+    header, .hero, .section, footer {
+      max-width: 800px;
+      width: 100%;
+    }
+    .socials {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+    .icon-btn{
+      width: 50px;height: 50px;border-radius: 12px;display: grid;place-items:center;
+      background: rgba(255,255,255,0.05);
+      transition: transform 0.2s ease;
+    }
+    .icon-btn:hover{transform: scale(1.1);background: rgba(102,227,255,0.2);}
+    .hero{
+      margin-top: 40px;
+    }
+    .chip-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
+    .chip{
+      padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+    .cta{
+      display:inline-flex;gap:10px;align-items:center;margin-top:18px;padding:12px 16px;border-radius:14px;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      color:#061018;font-weight:700;border:none;cursor:pointer;text-decoration:none;
+    }
+    .grid{display:grid;grid-template-columns:1fr;gap:16px;justify-items:center}
+    .card{
+      border-radius:20px;padding:18px;background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.06);
+      width:100%;
+    }
+    footer{
+      margin-top:40px;color:var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Iskandar</h1>
+    <nav class="socials">
+      <a class="icon-btn" href="https://instagram.com/iskandarvx7" target="_blank">IG</a>
+      <a class="icon-btn" href="https://t.me/mkingboi" target="_blank">TG</a>
+      <a class="icon-btn" href="https://github.com/odamboy01" target="_blank">GH</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to my personal space on the web.</h2>
+    <p>I'm Iskandar — a curious builder who enjoys Python, web tech, and game dev.</p>
+    <div class="chip-row">
+      <span class="chip">Python</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">HTML</span>
+      <span class="chip">CSS</span>
+      <span class="chip">C++</span>
+      <span class="chip">C#</span>
+      <span class="chip">React</span>
+      <span class="chip">Rust</span>
+      <span class="chip">Go</span>
+    </div>
+    <a class="cta" href="#projects">See my projects</a>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Selected Projects</h2>
+    <div class="grid">
+      <div class="card"><h3>Portfolio v2</h3><p>Static site with smooth hover states.</p></div>
+      <div class="card"><h3>Unity Car Prototype</h3><p>Arcade car controller in Unity 6.</p></div>
+      <div class="card"><h3>Rust CLI Toolkit</h3><p>Handy utilities for file ops & parsing.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <small>© <span id="y"></span> Iskandar. Built with ❤️</small>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
