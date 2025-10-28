@@ -1,110 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Iskandar • Developer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: #0b0f14;
-      --text: #e6eef8;
-      --muted: #9fb0c5;
-      --brand: #66e3ff;
-      --brand-2: #a78bfa;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family: Inter, sans-serif;
-      background: linear-gradient(135deg, rgba(102,227,255,0.15), rgba(167,139,250,0.15)),
-                  url('https://www.transparenttextures.com/patterns/stardust.png');
-      background-color: var(--bg);
-      color: var(--text);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 24px;
-    }
-    header, .hero, .section, footer {
-      max-width: 800px;
-      width: 100%;
-    }
-    .socials {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 16px;
-    }
-    .icon-btn{
-      width: 50px;height: 50px;border-radius: 12px;display: grid;place-items:center;
-      background: rgba(255,255,255,0.05);
-      transition: transform 0.2s ease;
-    }
-    .icon-btn:hover{transform: scale(1.1);background: rgba(102,227,255,0.2);}
-    .hero{
-      margin-top: 40px;
-    }
-    .chip-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
-    .chip{
-      padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.08);
-    }
-    .cta{
-      display:inline-flex;gap:10px;align-items:center;margin-top:18px;padding:12px 16px;border-radius:14px;
-      background: linear-gradient(90deg, var(--brand), var(--brand-2));
-      color:#061018;font-weight:700;border:none;cursor:pointer;text-decoration:none;
-    }
-    .grid{display:grid;grid-template-columns:1fr;gap:16px;justify-items:center}
-    .card{
-      border-radius:20px;padding:18px;background:rgba(255,255,255,0.04);
-      border:1px solid rgba(255,255,255,0.06);
-      width:100%;
-    }
-    footer{
-      margin-top:40px;color:var(--muted);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammadjon Iskandarov - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Iskandar</h1>
-    <nav class="socials">
-      <a class="icon-btn" href="https://instagram.com/iskandarvx7" target="_blank">IG</a>
-      <a class="icon-btn" href="https://t.me/mkingboi" target="_blank">TG</a>
-      <a class="icon-btn" href="https://github.com/odamboy01" target="_blank">GH</a>
-    </nav>
-  </header>
+    <div class="container">
+        <!-- Header with controls -->
+        <header class="header">
+            <div class="controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <div class="language-switcher">
+                    <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
+                    <button id="lang-uz" class="lang-btn" data-lang="uz">UZ</button>
+                </div>
+            </div>
+        </header>
 
-  <section class="hero">
-    <h2>Welcome to my personal space on the web.</h2>
-    <p>I'm Iskandar — a curious builder who enjoys Python, web tech, and game dev.</p>
-    <div class="chip-row">
-      <span class="chip">Python</span>
-      <span class="chip">JavaScript</span>
-      <span class="chip">HTML</span>
-      <span class="chip">CSS</span>
-      <span class="chip">C++</span>
-      <span class="chip">C#</span>
-      <span class="chip">React</span>
-      <span class="chip">Rust</span>
-      <span class="chip">Go</span>
+        <!-- Main content -->
+        <main class="main">
+            <!-- Hero section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="name" data-en="Muhammadjon Iskandarov" data-uz="Muhammadjon Iskandarov">Muhammadjon Iskandarov</h1>
+                    <h2 class="title" data-en="Web Developer & Designer" data-uz="Veb Dasturchi va Dizayner">Web Developer & Designer</h2>
+                    <p class="subtitle" data-en="Full-Stack Developer & Tech Enthusiast" data-uz="To'liq Dasturchi va Texnologiya Ishtiyoqchisi">Full-Stack Developer & Tech Enthusiast</p>
+                </div>
+            </section>
+
+            <!-- About section -->
+            <section class="about">
+                <h3 class="section-title" data-en="About Me" data-uz="Men Haqimda">About Me</h3>
+                <div class="about-content">
+                    <p class="about-text" data-en="I am a passionate web developer and designer specializing in both frontend and backend development. Over the past few years, I have helped numerous small businesses establish their online presence and grow their digital footprint." data-uz="Men frontend va backend dasturlashda ixtisoslashgan ehtirosli veb dasturchi va dizaynerman. So'nggi yillar davomida ko'plab kichik bizneslarga onlayn mavjudligini o'rnatish va raqamli oyoq izlarini oshirishda yordam berdim.">I am a passionate web developer and designer specializing in both frontend and backend development. Over the past few years, I have helped numerous small businesses establish their online presence and grow their digital footprint.</p>
+                    
+                    <p class="about-text" data-en="Beyond client work, I've created countless projects out of pure curiosity and boredom, constantly exploring new technologies and pushing the boundaries of what's possible. My passion for technology extends beyond software development." data-uz="Mijozlar bilan ishlashdan tashqari, men sof qiziqish va zerikishdan ko'plab loyihalar yaratdim, doimiy ravishda yangi texnologiyalarni o'rganib, mumkin bo'lgan narsalarning chegaralarini kengaytirdim. Texnologiyaga bo'lgan ehtirosim dasturiy ta'minot dasturlashdan tashqariga cho'ziladi.">Beyond client work, I've created countless projects out of pure curiosity and boredom, constantly exploring new technologies and pushing the boundaries of what's possible. My passion for technology extends beyond software development.</p>
+                </div>
+            </section>
+
+            <!-- Skills section -->
+            <section class="skills">
+                <h3 class="section-title" data-en="Technical Skills" data-uz="Texnik Ko'nikmalar">Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4 class="category-title" data-en="Programming Languages" data-uz="Dasturlash Tillari">Programming Languages</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 class="category-title" data-en="Web Technologies" data-uz="Veb Texnologiyalar">Web Technologies</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 class="category-title" data-en="Database" data-uz="Ma'lumotlar Bazasi">Database</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">SQLite</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience section -->
+            <section class="experience">
+                <h3 class="section-title" data-en="Experience & Expertise" data-uz="Tajriba va Ekspertiza">Experience & Expertise</h3>
+                <div class="experience-content">
+                    <div class="experience-item">
+                        <h4 class="experience-title" data-en="Small Business Solutions" data-uz="Kichik Biznes Yechimlari">Small Business Solutions</h4>
+                        <p class="experience-desc" data-en="Helped small businesses establish their online presence with custom websites, e-commerce solutions, and digital marketing tools." data-uz="Kichik bizneslarga maxsus veb-saytlar, elektron tijorat yechimlari va raqamli marketing vositalari bilan onlayn mavjudligini o'rnatishda yordam berdim.">Helped small businesses establish their online presence with custom websites, e-commerce solutions, and digital marketing tools.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h4 class="experience-title" data-en="Android Modding & Custom Firmware" data-uz="Android Modlash va Maxsus Firmware">Android Modding & Custom Firmware</h4>
+                        <p class="experience-desc" data-en="Extensive experience in installing custom firmware and modding Android phones, unlocking their full potential and customization capabilities." data-uz="Maxsus firmware o'rnatish va Android telefonlarni modlashda keng tajriba, ularning to'liq potentsiali va sozlash imkoniyatlarini ochish.">Extensive experience in installing custom firmware and modding Android phones, unlocking their full potential and customization capabilities.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h4 class="experience-title" data-en="Hardware Repairs & PC Maintenance" data-uz="Hardware Ta'mirlash va PC Texnik Xizmat">Hardware Repairs & PC Maintenance</h4>
+                        <p class="experience-desc" data-en="Skilled in hardware repairs and PC maintenance, having repaired countless computers and gained deep understanding of hardware components." data-uz="Hardware ta'mirlash va PC texnik xizmat ko'rsatishda malakali, ko'plab kompyuterlarni ta'mirlagan va hardware komponentlarini chuqur tushungan.">Skilled in hardware repairs and PC maintenance, having repaired countless computers and gained deep understanding of hardware components.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h4 class="experience-title" data-en="Linux Enthusiast" data-uz="Linux Ishtiyoqchisi">Linux Enthusiast</h4>
+                        <p class="experience-desc" data-en="Big fan of Linux with extensive experience using Arch Linux. Passionate about open-source software and system administration." data-uz="Arch Linux ishlatishda keng tajribaga ega Linux ishtiyoqchisi. Ochiq manba dasturiy ta'minot va tizim boshqaruvi haqida ehtirosli.">Big fan of Linux with extensive experience using Arch Linux. Passionate about open-source software and system administration.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects section -->
+            <section class="projects">
+                <h3 class="section-title" data-en="Personal Projects" data-uz="Shaxsiy Loyihalar">Personal Projects</h3>
+                <div class="projects-content">
+                    <p class="projects-intro" data-en="I've created countless projects out of curiosity and boredom, constantly exploring new technologies and experimenting with innovative solutions. Each project represents a learning opportunity and a chance to push creative boundaries." data-uz="Men qiziqish va zerikishdan ko'plab loyihalar yaratdim, doimiy ravishda yangi texnologiyalarni o'rganib, innovatsion yechimlar bilan tajriba o'tkazdim. Har bir loyiha o'rganish imkoniyati va ijodiy chegaralarni kengaytirish imkoniyatini ifodalaydi.">I've created countless projects out of curiosity and boredom, constantly exploring new technologies and experimenting with innovative solutions. Each project represents a learning opportunity and a chance to push creative boundaries.</p>
+                </div>
+            </section>
+
+            <!-- Contact section -->
+            <section class="contact">
+                <h3 class="section-title" data-en="Get In Touch" data-uz="Bog'lanish">Get In Touch</h3>
+                <div class="contact-content">
+                    <p class="contact-text" data-en="Interested in working together or have a project in mind? I'd love to hear from you!" data-uz="Birgalikda ishlash yoki aqlida loyiha bor? Sizdan eshitishni juda xohlayman!">Interested in working together or have a project in mind? I'd love to hear from you!</p>
+                    <div class="contact-info">
+                        <p class="contact-item" data-en="Available for freelance projects and collaborations" data-uz="Freelance loyihalar va hamkorliklar uchun mavjud">Available for freelance projects and collaborations</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text" data-en="© 2024 Muhammadjon Iskandarov. Built with passion and attention to detail." data-uz="© 2024 Muhammadjon Iskandarov. Ehtiros va diqqat bilan qurilgan.">© 2024 Muhammadjon Iskandarov. Built with passion and attention to detail.</p>
+        </footer>
     </div>
-    <a class="cta" href="#projects">See my projects</a>
-  </section>
 
-  <section id="projects" class="section">
-    <h2>Selected Projects</h2>
-    <div class="grid">
-      <div class="card"><h3>Portfolio v2</h3><p>Static site with smooth hover states.</p></div>
-      <div class="card"><h3>Unity Car Prototype</h3><p>Arcade car controller in Unity 6.</p></div>
-      <div class="card"><h3>Rust CLI Toolkit</h3><p>Handy utilities for file ops & parsing.</p></div>
-    </div>
-  </section>
-
-  <footer>
-    <small>© <span id="y"></span> Iskandar. Built with ❤️</small>
-  </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    <script src="script.js"></script>
 </body>
 </html>
